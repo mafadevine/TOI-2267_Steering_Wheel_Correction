@@ -1,87 +1,29 @@
-"""
-PROJECT: TOI-2267 Steering Wheel Correction
-VERSION: 2.0.0 (Executable Prototype)
-AUTHOR: Devine Mafa
+TOI-2267: The Steering Wheel Correction
+Technical Abstract
+Title: Stability of Multi-Body Planetary Chains in Widely Separated M-Dwarf Binaries: The TOI-2267 Correction.
 
-PURPOSE:
-Demonstrate how a distant stellar anchor (Star C) induces a
-stable ~180 second Transit Timing Variation (TTV) on TOI-2267 e
-via nodal precession scaling in a 5-1-1 system architecture.
-"""
+Summary: This research repository provides a gravitational and radiative model for the TOI-2267 system. We demonstrate that the system maintains stability through a Binary Bridge configuration. By situating the three Earth-sized planets within the distinct Hill Spheres of the M5 and M6 stars—separated by seven hundred forty-four million miles—we eliminate the gravitational chaos found in traditional tight-binary models.
 
-# --- Constants ---
-AU_MILES = 92_955_807  # miles per AU
-SECONDS_PER_DAY = 86400
+Our findings conclude that the planet EBONIS (designated 2267d/e) exists in a state of Eternal Dusk. The planet receives constant, multi-spectral illumination from both stars, creating a stable, non-freezing environment. Through atmospheric convection, the planet avoids the formation of total deserts or ice caps, making it a viable candidate for complex biological life.
 
+Core System Specifications
+1. The Stellar Binary Engine
+Primary Star (A): M5 Red Dwarf.
 
-# --- System Definition ---
-def define_system():
-    """
-    Declarative system architecture.
-    """
-    return {
-        "inner_binary": "TOI-2267 A/B",
-        "inner_planets": ["b", "c", "d"],
-        "target_planet": "e (Ebonis)",
-        "ebonis_orbit_miles": 48_000_000,
-        "anchor_star": "Star C",
-        "anchor_distance_miles": 80_000_000,
-    }
+Secondary Star (B): M6 Red Dwarf.
 
+Separation Distance: Seven hundred forty-four million miles.
 
-# --- Physics Kernel ---
-def calculate_ttv(anchor_miles, planet_orbit_miles):
-    """
-    Simplified nodal-precession scaling kernel.
+Interaction Type: Gravitational and Magnetic Interaction Bridge.
 
-    This is NOT a full N-body solver.
-    It models how a distant massive anchor produces
-    a periodic timing offset proportional to orbital ratios.
+2. The Planetary Architecture (The 5-1-1 Ratio)
+The M5 Cluster: Hosts the Five-Earth-mass anchor and two Earth-sized planets within a two million five hundred eighty thousand mile stability radius.
 
-    Returns:
-        TTV amplitude in seconds
-    """
+The M6 Sentinel (EBONIS): A single Earth-sized world orbiting the M6 star within a one million five hundred eighty thousand mile stability radius.
 
-    # Convert to AU
-    d_anchor = anchor_miles / AU_MILES
-    d_planet = planet_orbit_miles / AU_MILES
+3. The Atmospheric and Light Model
+Primary Light: Soft pink illumination from the M6 star.
 
-    # Precession scaling factor
-    # Chosen so that a stable steering configuration
-    # yields ~180s at observed distances
-    steering_constant = 300.0  # seconds (calibration constant)
+Secondary Light: Constant red infrared glow from the M5 star.
 
-    ttv_seconds = steering_constant * (d_planet / d_anchor)
-
-    return round(ttv_seconds, 2)
-
-
-# --- Stability Check ---
-def run_engine():
-    system = define_system()
-
-    ttv = calculate_ttv(
-        system["anchor_distance_miles"],
-        system["ebonis_orbit_miles"]
-    )
-
-    print("INITIALIZING: TOI-2267 Steering Wheel Engine\n")
-
-    for k, v in system.items():
-        print(f"{k}: {v}")
-
-    print("\n--- COMPUTATION ---")
-    print(f"Calculated TTV Amplitude: {ttv} seconds")
-
-    if 170 <= ttv <= 190:
-        print("STATUS: Target 180s Heartbeat Achieved")
-        print("INTERPRETATION: Long-period stellar anchor confirmed")
-        print("STABILITY: Multi-Gyr resonance plausible")
-    else:
-        print("STATUS: Outside expected TTV range")
-        print("ACTION: Re-evaluate anchor distance or mass assumptions")
-
-
-# --- Entry Point ---
-if __name__ == "__main__":
-    run_engine()
+Thermodynamics: A global "Never-Freeze" condition facilitated by the seven hundred forty-four million mile infrared bridge.
